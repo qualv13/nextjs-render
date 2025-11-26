@@ -55,7 +55,7 @@ export default function Home() {
     };
 
     return (
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', maxWidth: '1400px', margin: '0 auto' }}>
             <Head>
                 <title>Energy Mix Dashboard</title>
             </Head>
@@ -70,7 +70,7 @@ export default function Home() {
 
             {/* Charts */}
             <section>
-                <h2 style={{ borderBottom: '2px solid #eee', paddingBottom: '10px' }}>
+                <h2 style={{ borderBottom: '2px solid #eee', paddingBottom: '10px'}}>
                     Forecasted energy dashboard
                 </h2>
 
@@ -86,11 +86,8 @@ export default function Home() {
                             backgroundColor: 'white',
                             boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
                         }}>
-                            <h3 style={{ textAlign: 'center' }}>{day.date}</h3>
-                            <p style={{ textAlign: 'center', color: 'green', fontWeight: 'bold' }}>
-                                Clean energy: {day.cleanEnergyPercent ? day.cleanEnergyPercent.toFixed(2) : 0}%
-                            </p>
-                            <FuelMixChart dataMap={day.dailyMix} />
+                            <h3 style={{ textAlign: 'center'}}>{day.date}</h3>
+                            <FuelMixChart dataMap={day.dailyMix} cleanEnergy={day.cleanEnergyPercent}/>
                         </div>
                     ))}
                 </div>
