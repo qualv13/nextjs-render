@@ -43,7 +43,7 @@ export const MovingWindowCalc: React.FC = () => {
                     <ul>
                         <li>Start: {result.startTime}</li>
                         <li>End: {result.endTime}</li>
-                        <li>Average clean energy percentage: {result.averageCleanPercent}%</li>
+                        <li>Average clean energy percentage: {result.cleanEnergyPercent.toFixed(2)}%</li>
                     </ul>
                 </div>
             )}
