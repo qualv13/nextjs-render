@@ -37,7 +37,7 @@ export default function Home() {
         setBestWindow(null);
         setError(null);
 
-        axios.get<MovingWindowResult>(`${BACKEND_URL}/api/energy/best-window?hours=${hours}`)
+        axios.get<MovingWindowResult>(`${BACKEND_URL}/api/charging/best-window?hours=${hours}`)
             .then(res => {
                 setBestWindow(res.data);
             })
