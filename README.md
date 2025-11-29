@@ -3,6 +3,8 @@ User interface for the CarCharging system. It visualizes the energy mix forecast
 
 Do you want a preview? [Here you can check it!](https://nextjs-render-fuqh.onrender.com/) 
 
+[Link to backend repo](https://github.com/qualv13/CarCharging)
+
 ## 🛠️ Technologies used
 - Framework: [React]
 - Language: [TypeScript]
