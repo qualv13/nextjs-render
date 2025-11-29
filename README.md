@@ -1,24 +1,41 @@
-# Next.js Hello World
+# CarCharging Frontend ️⚡🚗
+User interface for the CarCharging system. It visualizes the energy mix forecast for the upcoming days and allows users to calculate the most eco-friendly charging window in upcoming 48h.
 
+Do you want a preview? [Here you can check it!](https://nextjs-render-fuqh.onrender.com/) 
 
-This example shows the most basic idea behind Next. We have 2 pages: `src/pages/index.js` and `src/pages/about.js`. The former responds to `/` requests and the latter to `/about`. Using `next/link` you can add hyperlinks between them with universal routing capabilities.
+## 🛠️ Technologies used
+- Framework: [React]
+- Language: [TypeScript]
+- HTTP Client: [Axios]
+- Visualization: [Recharts]
+- Style: [CSS Inline Styles]
 
-The app in this repo is deployed at https://next-js.onrender.com.
+## 📂 Project structire
+```text
+src/
+├── components/         # UI elements
+│   ├── ForecastDashboard.tsx # Container for charts
+│   ├── FuelMixChart.tsx      # Chart maker
+│   └── SmartCalculator.tsx   # Form and result for car charging window
+│
+├── hooks/              # Connection to backend
+│   └── useEnergyApi.ts       # EndPoints use
+│
+├── interfaces/         # Interfaces used
+│   └── types.ts              # DTOs
+│
+├── pages/              # Pages
+│   └── index.tsx             # Main page with all elements
+│
+└── utils/              # Config files
+    └── config.ts             # backend URL
+```
 
-## Deploy as Node Web Service
+## How to run ❓
+```bash
+   yarn install
+   yarn dev
+```
+and open [http://localhost:3000](http://localhost:3000)
 
-Click the button below to deploy this app on Render.
-
-<a href="https://render.com/deploy" referrerpolicy="no-referrer-when-downgrade" rel="nofollow">
-  <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" />
-</a>
-
-## Deploy as Static Site
-
-1. Modify the code:
-    1. In `render.yaml`, replace the definition of the service named `next-js` with the definition that is commented out.
-    2. In `next.config.mjs`, uncomment the line that sets `output: "export"`.
-
-2. Commit the code changes to your repository.
-
-3. Click the Deploy to Render button.
+Feel free to use it.
